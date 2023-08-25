@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="widht=device-width, initial-scale=1.0">
+  <title>Laberinto</title>
+  <link rel="stylesheet" href="./estilos.css">
+</head>
+<body>
+
+  <div id="page">
+
+      <div id="Message-Container">
+        <div id="message">
+          <h1>¡Felicidades!</h1>
+          <p>¿Estás listo?</p>
+          <p id="moves"></p>
+          <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="¡Genial!" />
+        </div>
+      </div>
+
+      <br>
+      <div id="menu">
+        <div class="custom-select">
+          <select id="diffSelect">
+                    <option value="10">Básico</option>
+                    <option value="15">Intermedio</option>
+                    <option value="38">Avanzado</option>
+                    <option value="38">Extreme</option>
+                </select>
+        </div>
+        <input id="starMazerBtn" type="button" onclick="makeMaze()" value="Comenzar" />
+      </div>
+      
+      <div id="view">
+        <div id="mazeContainer">
+          <canvas id="mazeCanvas" class="border" height="1100" width="1100"></canvas>
+        </div>
+      </div>
+      <p id="instrucciones">Utiliza los teclados de flechas para encontrar los derechos y salir del laberinto antes de que el tiempo se agote</p>
+    </div>      
+  
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+</body>
+</html>
